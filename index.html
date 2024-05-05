@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Интернет Магазин</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/itc-slider.css">
+    <link rel="stylesheet" href="css/accordion.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <nav class="nav">
+                <h2 class="logo">Apple</h2>
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="" class="nav__link">iPhone</a></li>
+                    <li class="nav__item"><a href="" class="nav__link">Mac</a></li>
+                    <li class="nav__item"><a href="" class="nav__link">Watch</a></li>
+                    <li class="nav__item"><a href="" class="nav__link">iPad</a></li>
+                </ul>
+                <div class="burger" onclick="burgerClick()">
+                    <div class="burger__line"></div>
+                    <div class="burger__line"></div>
+                    <div class="burger__line"></div>
+                </div>
+            </nav>
+            <button class="btn_menu" id="btn_menu">меню</button>
+            <div class="header__menu" id="menu">
+                <ul class="menu__list">
+                    <li class="menu__item"><a href="#" class="menu__link">вход</a></li>
+                    <li class="menu__item"><a href="#" class="menu__link">корзина</a></li>
+                    <li class="menu__item"><a href="#" class="menu__link">акции</a></li>
+                    <li class="menu__item"><a href="#" class="menu__link">спонсоры</a></li>
+                    <li class="menu__item">
+                        <div class="theme">
+                            <li class="theme__title">Тема</li>
+                            <ul class="theme__list">
+                                <li class="theme__item">
+                                    <div class="theme__light" onclick="choiceLight()"></div>    
+                                </li>
+                                <li class="theme__item">
+                                    <div class="theme__dark" onclick="choiceDark()"></div>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>  
+
+    </header>
+    <main class="main">
+        <section class="shop">
+            <div class="container">
+              <h1 class="shop__title">Apple</h1>
+              <div class="itc-slider" data-slider="itc-slider"> 
+                <div class="itc-slider-wrapper">
+                    <div class="itc-slider-items">
+                        <div class="itc-slider-item pic" >
+                            <img src="img/iPhone.jpg" alt="супер мега машина" class="shop__img">
+                        </div>
+                        <div class="itc-slider-item pic">
+                            <img src="img/iPad.jpg" alt="супер мега машина" class="shop__img">
+                        </div>
+                        <div class="itc-slider-item pic" >
+                            <img src="img/Watch.jpg" alt="супер мега машина" class="shop__img">
+                        </div>
+                        <div class="itc-slider-item pic" >
+                            <img src="img/Mac.jpg" alt="супер мега машина" class="shop__img2">
+                        </div>
+                    </div>
+                </div>
+                <button class="itc-slider-btn itc-slider-btn-prev"></button>
+                <button class="itc-slider-btn itc-slider-btn-next"></button>
+              </div>
+              <div class="accordion" id="accordion-1">
+                <div class="accordion__item">
+                    <h2 class="accordion__header">iPhone 15 Pro</h2>
+                    <div class="accordion__body">Apple iPhone 15 Pro dual-SIM 256 ГБ, «титановый бежевый»
+                        <p class="shop__price">1391$</p>
+                        <button class="shop__btm" id="btm4" onclick="buy4()">КУПИТЬ</button>
+                    </div>
+                </div>
+                <div class="accordion__item">
+                    <h2 class="accordion__header">Apple iPad 10,2</h2>
+                    <div class="accordion__body">Apple iPad 10,2" (2021) Wi-Fi 64 ГБ, «серый космос»
+                        <p class="shop__price">353$</p>
+                        <button class="shop__btm" id="btm3" onclick="buy3()">КУПИТЬ</button>
+                    </div>
+                </div>
+                <div class="accordion__item">
+                    <h2 class="accordion__header">Apple Watch Series 9</h2>
+                    <div class="accordion__body">Apple Watch Series 9, 41 мм, корпус из алюминия цвета «сияющая звезда», спортивный ремешок цвета «сияющая звезда», размер S/M
+                        <p class="shop__price">428$</p>
+                        <button class="shop__btm" id="btm2" onclick="buy2()">КУПИТЬ</button>
+                    </div>
+                </div>
+                <div class="accordion__item">
+                    <h2 class="accordion__header">Apple MacBook Air 13</h2>
+                    <div class="accordion__body">Apple MacBook Air 13" (M3, 8C CPU/8C GPU, 2024), 8 ГБ, 256 ГБ SSD, «полуночный черный»
+                        <p class="shop__price">1605$</p>
+                        <button class="shop__btm" id="btm1" onclick="buy1()">КУПИТЬ</button>
+                    </div>
+                </div>
+              </div>
+              <!--<h2 class="shop__title">Описание</h2>    
+              <p class="shop__text">Колаба айфона с тостером и фольцваген</p>
+              <h2 class="shop__title">цена</h2>
+              <p class="shop__price">300$</p>
+              <button class="shop__btm" id="btm" onclick="buy()">купить</button>-->
+
+            </div>
+        </section>
+        <section class="map">
+            <div class="container">
+                <h2 class="map__title">Пункт самовывоза</h2>
+                <ul class="map__list">
+                    <li class="map__item">
+                        <h3 class="list__title">google Maps</h3>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d155.07360720347563!2d46.01535384596119!3d51.546640197090575!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sru!4v1712493614667!5m2!1sru!2sru" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </li>
+                    <li class="map__item">
+                        <h3 class="list__title"> Яндекс Maps</h3>
+                        <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ad1a69c97ef299a59585ca59a9748fe855d6ad1a90fcc11eb838115a20a48f34a&amp;width=100%&amp;height=450&amp;lang=ru_RU&amp;scroll=true"></script>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section class="analog">
+            <div class="container">
+                <h1 class="analog__title">Аналоги</h1>
+                <ul class="analog__list">
+                    <div class="analog__png" >
+                        <img src="img/iPhone.jpg" alt="супер мега машина" width="200px" class="shop__img">
+                        <h2 class="analog__text">iPhone 15</h2>
+                        <h1 class="analog__buy">1391$</h1>
+                        <button class="analog__btn">КУПИТЬ</button>
+                    </div>
+                    <div class="analog__png" >
+                        <img src="img/Mac.jpg" alt="супер мега машина" width="200px" class="shop__img">
+                        <h2 class="analog__text">MacBook Air 13</h2>
+                        <h1 class="analog__buy">1605$</h1>
+                        <button class="analog__btn">КУПИТЬ</button>
+                    </div>
+                    <div class="analog__png" >
+                        <img src="img/Watch.jpg" alt="супер мега машина" width="200px" class="shop__img">
+                        <h2 class="analog__text">Watch Series 9</h2>
+                        <h1 class="analog__buy">428$</h1>
+                        <button class="analog__btn">КУПИТЬ</button>
+                    </div>
+                    <div class="analog__png" >
+                        <img src="img/iPad.jpg" alt="супер мега машина" width="200px" class="shop__img">
+                        <h2 class="analog__text">iPad 10,2</h2>
+                        <h1 class="analog__buy">353$</h1>
+                        <button class="analog__btn">КУПИТЬ</button>
+                    </div>
+
+
+                </ul>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+            <div class="container">
+                <p class="footer__text">
+                    &copy; 2024 Apple
+                </p>
+            </div>
+    </footer>
+    <script src="scripts/script.js"></script>
+    <script src="scripts/itc-slider.js"></script>
+    <script src="scripts/menu.js"></script>
+    <script src="scripts/accordion.js"></script>
+    <script src="scripts/theme.js"></script>
+    <script src="scripts/burger.js"></script>
+</body>
+
+</html>
